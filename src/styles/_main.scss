@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Retro Gaming';
+    src: url('/fonts/RetroGaming.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Jersey 15', system-ui;
+    //font-family: 'Retro Gaming', system-ui;
+}
+
+body {
+    height: 100vh;
+    overflow: auto;
+}
+
+.container {
+    max-width: 1812px;
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 100%;
+}
