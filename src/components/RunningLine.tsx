@@ -1,4 +1,6 @@
+// @ts-ignore
 import { Swiper, SwiperSlide } from 'swiper/react';
+// @ts-ignore
 import { Autoplay } from 'swiper/modules';
 
 // @ts-expect-error
