@@ -1,0 +1,274 @@
+.header {
+    position: fixed;
+    top: 26px;
+    background: none;
+    width: 100%;
+    z-index: 11;
+
+    &-content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 24px 18px;
+
+        &-mobile {
+            display: none;
+        }
+    }
+
+    &-bg {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        transform: translateY(-50%);
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+
+        &-mobile {
+            display: none;
+        }
+    }
+
+    &-logo {
+        svg {
+            width: 100%;
+            height: auto;
+        }
+
+        &-mobile {
+            display: none;
+        }
+    }
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        &-link {
+            color: #000;
+            font-family: 'Retro Gaming', system-ui;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 125%;
+            text-decoration: none;
+        }
+    }
+
+    &-socials {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        &-link {
+            color: #000;
+            font-family: 'Retro Gaming', system-ui;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 125%;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        position: fixed;
+        top: 34px;
+        background: none;
+        width: 100%;
+        z-index: 11;
+
+        &-content {
+            display: none;
+
+            &-mobile {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 30px 16px 24px;
+                z-index: 10;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        &-bg {
+            display: none;
+
+            &-mobile {
+                display: block;
+                margin: 0 auto;
+                position: absolute;
+                width: 100%;
+                top: 43%;
+                left: 0;
+                right: 0;
+                z-index: -1;
+                transform: translateY(-50%);
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        &-logo {
+            display: none;
+
+            &-mobile {
+                display: block;
+
+                svg {
+                    width: 106px;
+                    height: 22px;
+                }
+            }
+        }
+
+        &-button {
+            position: relative;
+            width: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 4px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            z-index: 20;
+
+            & span {
+                width: 100%;
+                height: 2px;
+                transition: 0.3s;
+                background: #000;
+            }
+
+            &.open {
+                span:nth-child(1) {
+                    transform: rotate(45deg) translate(6px, 8px);
+                }
+
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                span:nth-child(3) {
+                    transform: rotate(-45deg) translate(0px, -3px);
+                }
+            }
+        }
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+
+            &-bg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                transform: translate(-50%, -50%);
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        &-mobile-menu {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            z-index: 15;
+            padding: 50px 10px 24px;
+            max-width: 500px;
+
+            a {
+                color: #000;
+                text-align: center;
+                font-family: 'Retro Gaming', system-ui;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 135%;
+                text-decoration: none;
+                margin-bottom: 12px;
+
+                &:last-of-type {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &-socials {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+
+                a {
+                    width: 32px;
+                    height: 32px;
+
+                    svg {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            &-button {
+                position: relative;
+                background: none;
+                border: none;
+                color: #000;
+                font-family: 'Retro Gaming', system-ui;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 135%;
+                margin-top: 20px;
+
+                &-bg {
+                    position: absolute;
+                    top: 10%;
+                    left: 50%;
+                    max-width: 303px;
+                    width: 100%;
+                    height: 100%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+
+                    svg {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+            }
+        }
+
+        &-nav {
+            display: none;
+        }
+
+        &-socials {
+            display: none;
+
+        }
+    }
+}

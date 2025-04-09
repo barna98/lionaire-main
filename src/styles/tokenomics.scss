@@ -1,0 +1,319 @@
+.tokenomics {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    .container {
+        max-width: 800px;
+    }
+
+    &-content {
+        display: grid;
+        align-items: center;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        gap: 57px;
+    }
+
+    &-img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        z-index: -1;
+
+        &-mobile {
+            display: none;
+        }
+    }
+
+    &-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 54px;
+        background: #C7C7C7;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 1;
+
+        &-swiper {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            transform: translateY(50%);
+            z-index: 1;
+        }
+
+        .swiper-slide span {
+            color: #FFF;
+            -webkit-text-stroke-width: 1.4px;
+            -webkit-text-stroke-color: #000;
+            font-family: 'Retro Gaming', system-ui;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 125%;
+        }
+
+        .swiper-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+
+            & svg {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .swiper-wrapper {
+            transition-timing-function: linear;
+        }
+
+        & .white {
+            height: 4px;
+            width: 100%;
+            background: white;
+            display: flex;
+
+            &.down {
+                margin-top: auto;
+            }
+        }
+
+        & .black {
+            height: 4px;
+            width: 100%;
+            background: #000;
+            display: flex;
+
+        }
+    }
+
+    &-circle {
+        width: 100%;
+        height: auto;
+        max-width: 402px;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &-table {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 16px;
+
+        &-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 4px solid transparent;
+            border-image: repeating-linear-gradient(to right, white 0 10px, transparent 5px 20px);
+            border-image-slice: 1;
+        }
+
+        &-title {
+            display: flex;
+            color: #FFF;
+            -webkit-text-stroke-width: 1.5px;
+            -webkit-text-stroke-color: #000;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 751px) {
+    .tokenomics {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        &-img {
+            display: none;
+
+            &-mobile {
+                display: flex;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &-contaner {
+            position: relative;
+        }
+
+        &-content {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 0;
+            transform: scale(0.8);
+        }
+
+        &-circle {
+            max-width: 622px;
+            margin-top: -130px;
+        }
+
+        &-table {
+            transform: scale(1.8);
+            margin-top: -123px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tokenomics {
+        &-content {
+            transform: scale(0.7);
+        }
+        &-circle {
+            max-width: 622px;
+            margin-top: -190px;
+            margin-bottom: 88px;
+        }
+
+    }
+}
+@media screen and (max-width: 580px) {
+    .tokenomics {
+        &-circle {
+            margin-top: -150px;
+            margin-bottom: 70px;
+        }
+    }
+}
+@media screen and (max-width: 530px) {
+    .tokenomics {
+        &-circle {
+            margin-top: -50px;
+            margin-bottom: 40px;
+        }
+        &-table{
+            transform: scale(1.5);
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .tokenomics {
+        &-circle {
+            margin-top: -60px;
+            margin-bottom: 80px;
+        }
+        &-table{
+            transform: scale(1.2);
+        }
+    }
+}
+
+@media screen and (max-width: 628px) {
+    .tokenomics {
+        &-item {
+            transform: scale(0.9);
+        }
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    .tokenomics-content {
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .tokenomics-content {
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .tokenomics-content {
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .tokenomics-content {
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .tokenomics-content {
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .tokenomics-content {
+        transform: scale(1.4);
+    }
+}
+
+@media screen and (min-width: 2100px) {
+    .tokenomics-content {
+        transform: scale(1.6);
+    }
+}
+
+@media screen and (min-width: 2400px) {
+    .tokenomics-content {
+        transform: scale(1.8);
+    }
+}
+
+@media screen and (min-width: 2600px) {
+    .tokenomics-content {
+        transform: scale(2);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tokenomics-content {
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (max-width: 628px) {
+    .tokenomics {
+        &-item {
+            transform: scale(0.9);
+        }
+    }
+
+}

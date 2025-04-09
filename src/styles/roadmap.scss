@@ -1,0 +1,547 @@
+.roadmap {
+    position: relative;
+    padding: 120px 0;
+    height: 100%;
+    overflow: hidden;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    &-img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: -1;
+
+        &-mobile {
+            display: none;
+        }
+    }
+
+    &-title {
+        color: #FF9500;
+        text-align: center;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: #000;
+        font-size: 72px;
+        font-weight: 400;
+        line-height: 100%;
+        margin-bottom: 16px;
+    }
+
+    &-text {
+        color: #FFF;
+        text-align: center;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: #000;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 100%;
+        max-width: 1006px;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    &-item {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        position: relative;
+        justify-content: space-between;
+        height: 100%;
+
+        &-bg {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: auto;
+            transform: translateY(-50%);
+            z-index: -1;
+            padding-top: 84px;
+
+            svg {
+                width: 100%;
+                height: auto;
+            }
+
+            &-mobile {
+                display: none;
+            }
+        }
+
+        &-track {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-size: 0;
+            padding-right: 30px;
+
+            &-line {
+                width: 48px;
+                flex: auto;
+                background: #C7C7C7;
+                border-right: 8px solid #4C4C4C;
+                border-left: 8px solid #FFFFFF;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-right: 8px;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 8px;
+                    background: #000;
+                    height: 100%;
+                    margin-left: -16px;
+
+                }
+
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 8px;
+                    background: #000;
+                    height: 100%;
+                    margin-right: -16px;
+                }
+            }
+
+            & .checked {
+                position: absolute;
+                top: 50%;
+                right: 63px;
+                transform: translateX(50%);
+                max-width: 128px;
+                max-height: 128px;
+                width: 100%;
+                height: 100%;
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        &-card {
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 100px 0;
+
+            &-phase {
+                color: #000;
+                font-family: 'Retro Gaming', system-ui;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 135%;
+                margin-bottom: 50px;
+            }
+
+            &-title {
+                color: #FF9500;
+                text-align: center;
+                -webkit-text-stroke-width: 3px;
+                -webkit-text-stroke-color: #000;
+                font-size: 72px;
+                font-weight: 400;
+                line-height: 100%;
+                margin-bottom: 24px;
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                li {
+                    color: #000;
+                    text-align: center;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 100%;
+                    list-style-type: none;
+                }
+            }
+        }
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1580px) {
+    .roadmap {
+        &-item {
+            &-card {
+                transform: scale(0.9);
+                padding: 80px 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .roadmap {
+        &-item {
+            &-bg {
+                top: 48%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .roadmap {
+        &-item {
+            &-card {
+                padding: 60px 0;
+            }
+
+            &-bg {
+                top: 45%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .roadmap {
+        &-item {
+            &-card {
+                transform: scale(0.7);
+                padding: 10px 0;
+
+                &-phase {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &-bg {
+                top: 44%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .roadmap {
+        &-item {
+            &-list {
+                gap: 0;
+
+                li {
+                    font-size: 28px;
+                }
+            }
+
+            &-card {
+                &-phase {
+                    margin-bottom: 40px;
+                }
+
+                &-list {
+                    gap: 10px;
+                }
+            }
+
+            &-bg {
+                top: 39%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .roadmap {
+        &-item {
+            &-card {
+                transform: scale(0.8);
+                padding: 50px 0;
+
+                &-phase {
+                    font-size: 20px;
+                }
+
+                &-title {
+                    font-size: 55px;
+                    margin-bottom: 6px;
+                }
+
+                &-text {
+                    font-size: 30px;
+                }
+
+                &-list {
+                    gap: 0;
+
+                    li {
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            &-bg {
+                top: 52%;
+            }
+
+            &-track .checked {
+                top: 34%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .roadmap {
+        &-item {
+            &-card {
+                transform: scale(0.7);
+                padding: 30px 0;
+
+                &-list {
+                    li {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            &-bg {
+                top: 48%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .roadmap {
+        &-item {
+            &-card {
+                padding: 20px 0;
+
+                &-phase {
+                    margin-bottom: 20px;
+                    font-size: 20px;
+                }
+
+                &-title {
+                    font-size: 48px;
+                    margin-bottom: 6px;
+                }
+
+                &-text {
+                    font-size: 22px;
+                }
+
+                &-list {
+                    gap: 0;
+
+                    & li {
+                        font-size: 26px;
+                    }
+                }
+            }
+
+            &-bg {
+                top: 46%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 751px) {
+    .roadmap {
+        padding-top: 46px;
+
+        &-img {
+            display: none;
+
+            &-mobile {
+                display: flex;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+
+        &-title {
+            font-size: 40px;
+            -webkit-text-stroke-width: 1.78px;
+            margin-bottom: 12px;
+        }
+
+        &-text {
+            color: #FFF;
+            text-align: center;
+            -webkit-text-stroke-width: 0.97px;
+            -webkit-text-stroke-color: #000;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 100%;
+        }
+
+        &-item {
+            grid-template-columns: 1fr;
+
+            &-track {
+                display: none;
+            }
+
+            &-bg {
+                display: none;
+
+                &-mobile {
+                    display: flex;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    height: auto;
+                    transform: translateY(-50%);
+                    z-index: -1;
+                    padding-top: 84px;
+
+                    svg {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            &-card {
+                transform: scale(1);
+                padding: 100px 0;
+
+                &-phase {
+                    font-size: 18px;
+                    margin-bottom: 29px;
+                }
+
+                &-title {
+                    font-size: 38px;
+                    -webkit-text-stroke-width: 1.5px;
+                    margin-bottom: 25px;
+                }
+
+                &-list {
+                    gap: 13px;
+
+                    li {
+                        font-size: 20px;
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .roadmap {
+        &-item {
+            &-card{
+                padding: 65px 0;
+            }
+            &-bg {
+                &-mobile {
+                    top: 46%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .roadmap {
+        &-item {
+            &-card{
+                padding: 45px 0;
+            }
+            &-bg {
+                &-mobile {
+                    top: 42%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 520px) {
+    .roadmap {
+        &-item {
+            &-card{
+                padding: 40px 0;
+            }
+            &-bg {
+                &-mobile {
+                    top: 40%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 490px) {
+    .roadmap {
+        &-item {
+            &-card{
+                padding: 35px 0;
+
+                &-phase{
+                    font-size: 16px;
+                }
+            }
+            &-bg {
+                &-mobile {
+                    top: 36%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .roadmap {
+        &-item {
+            &-card{
+                padding: 30px 0;
+
+                &-phase{
+                    font-size: 14px;
+                }
+                &-list{
+                    gap: 3px;
+                    li{
+                        font-size: 16px;
+                    }
+                }
+            }
+            &-bg {
+                &-mobile {
+                    top: 34%;
+                }
+            }
+        }
+    }
+}

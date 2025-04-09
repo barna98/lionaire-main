@@ -1,0 +1,215 @@
+.footer {
+    position: relative;
+
+    &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: 8px 1fr 8px;
+
+        &-col, &-body {
+            background: #C7C7C7;
+            border-top: 8px solid #fff;
+
+            &:before {
+                content: "";
+                display: block;
+                margin-top: -16px;
+                height: 8px;
+                width: 100%;
+                background: #000;
+            }
+        }
+
+        &-col {
+            margin-top: 8px;
+        }
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 16px;
+        gap: 48px;
+    }
+
+    &-img {
+        max-width: 292px;
+        width: 100%;
+        font-size: 0;
+        margin-top: 18px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        &-mobile {
+            display: none;
+        }
+    }
+
+    &-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 0 25px;
+
+        &-title {
+            color: #000;
+            font-family: 'Retro Gaming', system-ui;
+            font-size: 58px;
+            font-weight: 400;
+            line-height: 135%;
+        }
+
+        &-subtitle {
+            color: #FFF;
+            -webkit-text-stroke-width: 1.5px;
+            -webkit-text-stroke-color: #000;
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 100%;
+        }
+
+        &-text {
+            color: rgba(0, 0, 0, 0.50);
+            font-family: 'Retro Gaming', system-ui;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 135%;
+        }
+    }
+
+    &-copyright {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 38px 0 25px;
+        max-width: 162px;
+        width: 100%;
+
+        &-socials {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            svg {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &-text {
+            color: #FFF;
+            text-align: center;
+            -webkit-text-stroke-width: 1.5px;
+            -webkit-text-stroke-color: #000;
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 125%;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        position: relative;
+
+        &-content {
+            flex-direction: column;
+            padding-top: 40px;
+            position: relative;
+        }
+
+        &-img {
+            display: none;
+
+            &-mobile {
+                display: block;
+                position: absolute;
+                bottom: -3px;
+                right: 0;
+
+                img {
+                    max-width: 154px;
+                    width: 100%;
+                }
+            }
+        }
+
+        &-copyright {
+            padding: 0 0 20px;
+
+            &-text {
+                -webkit-text-stroke-width: 1px;
+                font-size: 24px;
+            }
+
+            &-socials {
+                position: absolute;
+                top: 63px;
+                right: -10px;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &-description {
+            padding: 0;
+
+            &-titles {
+                width: 70%;
+                margin-bottom: 13px;
+            }
+
+            &-title {
+                font-size: 40px;
+            }
+
+            &-subtitle {
+                font-size: 30px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .footer {
+        &-copyright {
+            &-text {
+                -webkit-text-stroke-width: 1px;
+                font-size: 24px;
+            }
+
+            &-socials {
+                position: absolute;
+                top: 63px;
+                right: -10px;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &-description {
+            padding: 0;
+
+            &-titles {
+                width: 70%;
+                margin-bottom: 13px;
+            }
+
+            &-title {
+                font-size: 32px;
+            }
+
+            &-subtitle {
+                font-size: 20px;
+                -webkit-text-stroke-width: 1px;
+            }
+        }
+    }
+}
