@@ -1,12 +1,8 @@
-// @ts-ignore
-import { Swiper, SwiperSlide } from 'swiper/react';
-// @ts-ignore
+import { Swiper, SwiperSlide } from 'swiper/swiper-react.mjs';
 import { Autoplay } from 'swiper/modules';
 
-// @ts-expect-error
-import 'swiper/css';
-// @ts-ignore
-import 'swiper/css/autoplay';
+import 'swiper/swiper.scss';
+import 'swiper/modules/autoplay.scss';
 
 interface PropsType{
     className?: string;
