@@ -1,9 +1,7 @@
-// @ts-ignore
 import { Swiper, SwiperSlide } from 'swiper/react';
 // @ts-ignore
 import 'swiper/css/pagination';
 
-// @ts-ignore
 import { Pagination } from 'swiper/modules';
 
 // @ts-expect-error

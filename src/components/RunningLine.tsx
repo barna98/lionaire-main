@@ -1,10 +1,10 @@
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import { Autoplay } from 'swiper/modules';
 
+// @ts-expect-error
 import 'swiper/css';
 
+// @ts-ignore
 import 'swiper/css/autoplay';
 
 interface PropsType{
