@@ -1,9 +1,13 @@
-import { Swiper, SwiperSlide } from 'swiper/swiper-react.mjs';
-import 'swiper/modules/pagination.scss';
+// @ts-ignore
+import { Swiper, SwiperSlide } from 'swiper/react';
+// @ts-ignore
+import 'swiper/css/pagination';
 
+// @ts-ignore
 import { Pagination } from 'swiper/modules';
 
-import 'swiper/swiper.scss';
+// @ts-expect-error
+import 'swiper/css';
 
 
 export default function AboutSwiper() {

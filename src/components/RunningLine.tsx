@@ -1,8 +1,11 @@
-import { Swiper, SwiperSlide } from 'swiper/swiper-react.mjs';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { Autoplay } from 'swiper/modules';
 
-import 'swiper/swiper.scss';
-import 'swiper/modules/autoplay.scss';
+import 'swiper/css';
+
+import 'swiper/css/autoplay';
 
 interface PropsType{
     className?: string;
