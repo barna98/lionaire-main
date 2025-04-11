@@ -1,0 +1,53 @@
+.label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+
+    span {
+        color: rgba(0, 0, 0, 0.50);
+        font-family: 'Retro Gaming', system-ui;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+    }
+}
+
+.input {
+    width: 100%;
+    background: #8B8B8B;
+    padding: 6px 12px;
+    color: #FFF;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #000;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 100%;
+    border-bottom: 4px solid #F1F1F1;
+    border-right: 4px solid #F1F1F1;
+    border-left: 4px solid #3A3A3A;
+    border-top: 4px solid #3A3A3A;
+    transition: 0.2s;
+
+    &:focus{
+        background: #DADADA;
+        padding: 6px 12px;
+        border-top: 4px solid #F1F1F1;
+        border-left: 4px solid #F1F1F1;
+        border-right: 4px solid #707070;
+        border-bottom: 4px solid #707070;
+    }
+
+
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+

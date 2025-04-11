@@ -1,6 +1,5 @@
 import RunningLine from './RunningLine.tsx';
-import BannerForm from './icons/banner/BannerForm.tsx';
-import BannerFormMobile from './icons/banner/BannerFormMobile.tsx';
+import BannerForm from './BannerForm.tsx';
 
 export default function Banner() {
     return (
@@ -16,8 +15,7 @@ export default function Banner() {
                     <p className="banner-text">
                         Becoming a Billionaire? Nah… a Lionaire
                     </p>
-                    <BannerForm />
-                    <BannerFormMobile />
+                    <BannerForm/>
                 </div>
             </div>
             <div className="banner-line">

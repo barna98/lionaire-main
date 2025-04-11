@@ -113,18 +113,177 @@
     }
 
     &-form {
-        max-width: 429px;
-        width: 100%;
-        margin-left: auto;
-        margin-bottom: 50px;
+        height: 703px;
+        width: 429px;
+        padding: 13px 28px 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px 0 24px auto;
+        position: relative;
 
-        & svg {
+        &-bg {
             width: 100%;
-            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: -1;
+
+            & svg {
+                width: 100%;
+                height: auto;
+            }
+
+            &-mobile {
+                display: none;
+            }
         }
 
-        &-mobile {
-            display: none;
+        &-title {
+            color: #000;
+            font-family: 'Retro Gaming', system-ui;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 135%;
+            margin-bottom: 36px;
+        }
+
+        &-raised {
+            color: #000;
+            font-family: 'Retro Gaming', system-ui;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 135%;
+            margin-bottom: 6px;
+        }
+
+        &-progress {
+            margin-bottom: 6px;
+        }
+
+        &-indicator {
+            &-mobile {
+                display: none;
+            }
+        }
+
+        &-prices {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 18px;
+        }
+
+        &-price {
+            color: #000;
+            font-family: 'Retro Gaming', system-ui;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 135%;
+        }
+
+        &-selector {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 18px 0;
+
+            &-title {
+                color: rgba(0, 0, 0, 0.50);
+                font-family: 'Retro Gaming', system-ui;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 135%;
+                margin-bottom: 7px;
+                text-align: start;
+            }
+
+            &-options {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 18px;
+                width: 100%;
+            }
+
+            &-option {
+                width: 100%;
+                padding: 14px 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: #DADADA;
+                border-top: 4px solid #F1F1F1;;
+                border-left: 4px solid #F1F1F1;;
+                border-bottom: 4px solid #707070;
+                border-right: 4px solid #707070;
+                cursor: pointer;
+                transition: 0.2s;
+
+                &-title {
+                    color: #FFF;
+                    font-family: 'Retro Gaming', system-ui;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 125%;
+                }
+
+                input {
+                    display: none;
+                }
+
+                &:has(input:checked) {
+                    background: #ABABAB;
+                    border-top: 4px solid #D0D0D0;
+                    border-left: 4px solid #D0D0D0;
+                    border-bottom: 4px solid #8C8A8A;
+                    border-right: 4px solid #8C8A8A;
+
+                }
+
+                &:has(input:checked) &-title {
+                    color: #000;
+                }
+
+                &:hover {
+                    background: #BFBFBF;
+                }
+            }
+        }
+
+        &-amounts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 14px;
+        }
+
+        &-button {
+            width: 100%;
+            margin-top: 16px;
+            padding: 11px 80px 10px;
+            background: #0BC617;
+            border-top: 4px solid #4EEF58;
+            border-left: 4px solid #4EEF58;
+            border-bottom: 4px solid #13931B;
+            border-right: 4px solid #13931B;
+            color: #000;
+            font-family: 'Retro Gaming', system-ui;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 135%;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                background: #2EA935;
+            }
         }
     }
 }
@@ -168,18 +327,86 @@
         }
 
         &-form {
-            display: none;
+            height: 628px;
+            width: 343px;
+            padding: 6px 20px 26px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 24px 0 24px auto;
+            position: relative;
+            z-index: 1;
 
-            &-mobile {
-                display: flex;
-                max-width: 335px;
-                width: 100%;
-                margin: 0 auto;
+            &-bg {
+                display: none;
 
-                & svg {
+                &-mobile {
+                    display: flex;
                     width: 100%;
-                    height: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    transform: translateY(-50%);
+                    z-index: -1;
+
+                    & svg {
+                        width: 100%;
+                        height: auto;
+                    }
                 }
+            }
+
+            &-title {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            &-raised {
+                margin-bottom: 5px;
+            }
+            &-progress {
+                margin-bottom: 6px;
+            }
+
+            &-indicator {
+                display: none;
+                &-mobile {
+                    display: block;
+                }
+            }
+
+            &-prices {
+                margin-bottom: 16px;
+            }
+
+            &-selector {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin: 16px 0;
+
+                &-title {
+                    margin-bottom: 6px;
+                }
+
+                &-options {
+                    gap: 17px;
+                }
+
+                &-option {
+                    width: 100%;
+                    padding: 10px 48px;
+                }
+            }
+
+            &-amounts {
+                gap: 17px;
+                margin-bottom: 11px;
+            }
+
+            &-button {
+                margin-top: 12px;
+                padding: 11px 30px 10px;
             }
         }
 
@@ -188,7 +415,8 @@
         }
     }
 }
-@media screen and (min-width: 500px){
+
+@media screen and (min-width: 500px) {
     .banner {
         &-img {
             &-mobile {
@@ -197,7 +425,8 @@
         }
     }
 }
-@media screen and (min-width: 600px){
+
+@media screen and (min-width: 600px) {
     .banner {
         &-img {
             &-mobile {
