@@ -6,12 +6,25 @@ import TelegramIcon from '../icons/header/TelegramIcon.tsx';
 import XIcon from '../icons/header/XIcon.tsx';
 import HeaderButtonBg from '../icons/header/HeaderButtonBg.tsx';
 
-export default function HeaderMobile() {
+interface PropsType {
+    walletOpen: boolean;
+    setWalletOpen: (v: boolean) => void;
+}
+
+export default function HeaderMobile({ setWalletOpen, walletOpen }: PropsType) {
     const [menuOpen, setMenuOpen] = React.useState(false);
 
     useEffect(() => {
         document.body.style.overflowY = menuOpen ? 'hidden' : 'initial';
     }, [menuOpen]);
+
+    useEffect(() => {
+        if (menuOpen) setWalletOpen(false);
+    }, [menuOpen]);
+
+    useEffect(() => {
+        if (walletOpen) setMenuOpen(false);
+    }, [walletOpen]);
 
     return (<>
             {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)}></div>}
@@ -36,7 +49,7 @@ export default function HeaderMobile() {
                             <a href="/"><TelegramIcon /></a>
                             <a href="/"><XIcon /></a>
                         </div>
-                        <button className="header-mobile-menu-button">
+                        <button className="header-mobile-menu-button" onClick={() => setWalletOpen(true)}>
                             <HeaderButtonBg />
                             Connect Wallet
                         </button>

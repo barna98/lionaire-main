@@ -4,17 +4,23 @@ import Banner from './components/Banner.tsx';
 import About from './components/About.tsx';
 import Tokenomics from './components/Tokenomics.tsx';
 import RoadMap from './components/RoadMap.tsx';
+import WalletPopup from './components/wallet-popup/WalletPopup.tsx';
+import { useState } from 'react';
 
 function App() {
+    const [walletOpen, setWalletOpen] = useState(false);
+
     return <>
-        <Header />
+        <Header walletOpen={walletOpen} setWalletOpen={setWalletOpen} />
         <main>
-            <Banner />
+            <Banner setWalletOpen={setWalletOpen} />
+            <WalletPopup walletOpen={walletOpen} setWalletOpen={setWalletOpen} />
             <About />
-            <Tokenomics/>
-            <RoadMap/>
+            <Tokenomics />
+            <RoadMap />
         </main>
         <Footer />
+
     </>;
 }
 

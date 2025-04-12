@@ -1,0 +1,149 @@
+.wallet-popup {
+    height: 290px;
+    width: 429px;
+    padding: 22px 28px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 22;
+
+    &-bg {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: -1;
+
+        & svg {
+            width: 100%;
+            height: auto;
+        }
+
+        &-mobile {
+            display: none;
+        }
+    }
+
+    &-title {
+        color: #000;
+        text-align: center;
+        font-family: 'Retro Gaming', system-ui;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 135%;
+        margin-bottom: 16px;
+    }
+
+    &-button {
+        width: 100%;
+        color: #FFF;
+        font-family: 'Retro Gaming', system-ui;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 125%;
+        padding: 10px 12px;
+        background: #ABABAB;
+        border-top: 4px solid #D0D0D0;
+        border-left: 4px solid #D0D0D0;
+        border-bottom: 4px solid #8C8A8A;
+        border-right: 4px solid #8C8A8A;
+        transition: 0.2s;
+        margin-bottom: 12px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            background: #BFBFBF;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+
+        }
+    }
+
+    &-close {
+        position: absolute;
+        border: none;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 25px;
+        right: 38px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+
+        &:hover svg rect {
+            fill: rgba(0, 0, 0, 0.65);;
+        }
+    }
+}
+
+.overlay-wallet-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.56);
+    z-index: 10;
+}
+
+@media screen and (max-width: 460px) {
+    .wallet-popup {
+        height: 224px;
+        width: 327px;
+        padding: 10px 14px;
+        margin: 0 auto;
+        top: 35%;
+        &-bg {
+            display: none;
+
+            &-mobile {
+                display: block;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                transform: translateY(-50%);
+                z-index: -1;
+
+                & svg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        &-title{
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        &-button{
+            margin-bottom: 10px;
+            padding: 8px 10px;
+        }
+        &-close{
+            top: 10px;
+            right: 25px;
+        }
+    }
+}

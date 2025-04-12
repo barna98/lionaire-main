@@ -81,7 +81,22 @@
 
                 &:hover path {
                     fill: rgba(0, 0, 0, 0.65);
+                }
+            }
+        }
 
+        &-button{
+            background: none;
+            border: none;
+            cursor: pointer;
+            svg {
+                path {
+                    fill: #000;
+                    transition: 0.2s;
+                }
+
+                &:hover path {
+                    fill: rgba(0, 0, 0, 0.65);
                 }
             }
         }

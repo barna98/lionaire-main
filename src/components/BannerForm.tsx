@@ -4,7 +4,11 @@ import BannerFormBg from './icons/banner/BannerFormBg.tsx';
 import BannerFormMobileBg from './icons/banner/BannerFormMobileBg.tsx';
 import BannerFormIndicatorMobileBg from './icons/banner/BannerFormIndicatorMobileBg.tsx';
 
-export default function BannerForm() {
+interface PropsType {
+    setWalletOpen: (v: boolean) => void;
+}
+
+export default function BannerForm({ setWalletOpen }: PropsType) {
     return (
         <div className="banner-form">
             <BannerFormBg />
@@ -49,7 +53,7 @@ export default function BannerForm() {
                 <Input label="Receive LNR" type="number" />
             </div>
             <Input label="Referral code" type="number" />
-            <button className="banner-form-button">
+            <button className="banner-form-button" onClick={() => setWalletOpen(true)}>
                 Connect Wallet
             </button>
         </div>

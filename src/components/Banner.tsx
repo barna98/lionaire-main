@@ -1,7 +1,11 @@
 import RunningLine from './RunningLine.tsx';
 import BannerForm from './BannerForm.tsx';
 
-export default function Banner() {
+interface PropsType {
+    setWalletOpen: (v: boolean) => void;
+}
+
+export default function Banner({ setWalletOpen }: PropsType) {
     return (
         <section className="banner">
             <img className="banner-img" src="/img/banner.png" alt="banner" />
@@ -15,7 +19,7 @@ export default function Banner() {
                     <p className="banner-text">
                         Becoming a Billionaire? Nah… a Lionaire
                     </p>
-                    <BannerForm/>
+                    <BannerForm setWalletOpen={setWalletOpen} />
                 </div>
             </div>
             <div className="banner-line">

@@ -5,7 +5,12 @@ import XIcon from './icons/header/XIcon.tsx';
 import WalletIcon from './icons/header/WalletIcon.tsx';
 import HeaderMobile from './header/HeaderMobile.tsx';
 
-export default function Header() {
+interface PropsType {
+    setWalletOpen: (v: boolean) => void;
+    walletOpen: boolean;
+}
+
+export default function Header({ setWalletOpen, walletOpen }: PropsType) {
     return (
         <header className="header">
             <div className="container">
@@ -29,10 +34,12 @@ export default function Header() {
                     <div className="header-socials">
                         <a href="/" className="header-socials-link"><TelegramIcon /></a>
                         <a href="/" className="header-socials-link"><XIcon /></a>
-                        <a href="/" className="header-socials-link"><WalletIcon /></a>
+                        <button onClick={() => setWalletOpen(true)} className="header-socials-button">
+                            <WalletIcon />
+                        </button>
                     </div>
                 </div>
-               <HeaderMobile/>
+                <HeaderMobile setWalletOpen={setWalletOpen} walletOpen={walletOpen} />
             </div>
         </header>
     );
