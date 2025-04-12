@@ -59,6 +59,11 @@
             font-weight: 400;
             line-height: 125%;
             text-decoration: none;
+            transition: 0.2s;
+
+            &:hover {
+                color: rgba(0, 0, 0, 0.65);
+            }
         }
     }
 
@@ -68,11 +73,17 @@
         gap: 32px;
 
         &-link {
-            color: #000;
-            font-family: 'Retro Gaming', system-ui;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 125%;
+            svg {
+                path {
+                    fill: #000;
+                    transition: 0.2s;
+                }
+
+                &:hover path {
+                    fill: rgba(0, 0, 0, 0.65);
+
+                }
+            }
         }
     }
 }
@@ -258,7 +269,6 @@
                         height: auto;
                     }
                 }
-
             }
         }
 
@@ -268,7 +278,12 @@
 
         &-socials {
             display: none;
-
         }
+    }
+}
+
+@media screen and (max-width: 410px){
+    .header-mobile-menu{
+        padding-top: 23px;
     }
 }

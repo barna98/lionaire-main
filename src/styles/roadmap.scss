@@ -60,14 +60,12 @@
 
         &-bg {
             position: absolute;
-            top: 50%;
+            top: 0;
             left: 0;
             right: 0;
             width: 100%;
             height: auto;
-            transform: translateY(-50%);
             z-index: -1;
-            padding-top: 84px;
 
             svg {
                 width: 100%;
@@ -143,7 +141,8 @@
             width: 100%;
             height: 100%;
             position: relative;
-            padding: 100px 0;
+            padding: 22px 0;
+            margin: 40px 0;
 
             &-phase {
                 color: #000;
@@ -194,7 +193,7 @@
         &-item {
             &-card {
                 transform: scale(0.9);
-                padding: 80px 0;
+                padding: 16px 0;
             }
         }
     }
@@ -204,7 +203,6 @@
     .roadmap {
         &-item {
             &-bg {
-                top: 48%;
             }
         }
     }
@@ -214,11 +212,9 @@
     .roadmap {
         &-item {
             &-card {
-                padding: 60px 0;
             }
 
             &-bg {
-                top: 45%;
             }
         }
     }
@@ -237,7 +233,6 @@
             }
 
             &-bg {
-                top: 44%;
             }
         }
     }
@@ -265,7 +260,6 @@
             }
 
             &-bg {
-                top: 39%;
             }
         }
     }
@@ -276,7 +270,7 @@
         &-item {
             &-card {
                 transform: scale(0.8);
-                padding: 50px 0;
+                padding: 12px 0;
 
                 &-phase {
                     font-size: 20px;
@@ -301,7 +295,6 @@
             }
 
             &-bg {
-                top: 52%;
             }
 
             &-track .checked {
@@ -316,7 +309,7 @@
         &-item {
             &-card {
                 transform: scale(0.7);
-                padding: 30px 0;
+                padding: 10px 0;
 
                 &-list {
                     li {
@@ -326,7 +319,6 @@
             }
 
             &-bg {
-                top: 48%;
             }
         }
     }
@@ -336,7 +328,7 @@
     .roadmap {
         &-item {
             &-card {
-                padding: 20px 0;
+                padding: 8px 0;
 
                 &-phase {
                     margin-bottom: 20px;
@@ -362,7 +354,6 @@
             }
 
             &-bg {
-                top: 46%;
             }
         }
     }
@@ -417,14 +408,12 @@
                 &-mobile {
                     display: flex;
                     position: absolute;
-                    top: 50%;
+                    top: 0;
                     left: 0;
                     right: 0;
                     width: 100%;
                     height: auto;
-                    transform: translateY(-50%);
                     z-index: -1;
-                    padding-top: 84px;
 
                     svg {
                         width: 100%;
@@ -435,7 +424,7 @@
 
             &-card {
                 transform: scale(1);
-                padding: 100px 0;
+                padding: 20px 0;
 
                 &-phase {
                     font-size: 18px;
@@ -465,11 +454,10 @@
     .roadmap {
         &-item {
             &-card{
-                padding: 65px 0;
+                padding: 12px 0;
             }
             &-bg {
                 &-mobile {
-                    top: 46%;
                 }
             }
         }
@@ -479,11 +467,11 @@
     .roadmap {
         &-item {
             &-card{
-                padding: 45px 0;
+                padding: 10px 0;
+                margin: 16px 0;
             }
             &-bg {
                 &-mobile {
-                    top: 42%;
                 }
             }
         }
@@ -493,11 +481,10 @@
     .roadmap {
         &-item {
             &-card{
-                padding: 40px 0;
+                padding: 8px 0;
             }
             &-bg {
                 &-mobile {
-                    top: 40%;
                 }
             }
         }
@@ -507,15 +494,18 @@
     .roadmap {
         &-item {
             &-card{
-                padding: 35px 0;
+                padding: 8px 0;
 
                 &-phase{
                     font-size: 16px;
                 }
+
+                &-title {
+                    margin-bottom: 10px;
+                }
             }
             &-bg {
                 &-mobile {
-                    top: 36%;
                 }
             }
         }
@@ -525,7 +515,7 @@
     .roadmap {
         &-item {
             &-card{
-                padding:25px 0 30px 0;
+                padding:10px 0 30px 0;
 
                 &-phase{
                     font-size: 14px;
@@ -539,7 +529,6 @@
             }
             &-bg {
                 &-mobile {
-                    top: 34%;
                 }
             }
         }
@@ -548,7 +537,7 @@
 @media screen and (max-width: 400px) {
     .roadmap{
         &-item-card{
-            padding: 27px 0 7px 0;
+            padding: 8px 0 7px 0;
         }
     }
 }

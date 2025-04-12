@@ -13,13 +13,16 @@ export default function BannerForm() {
             <p className="banner-form-raised">Raised: $12,123,534.43</p>
             <span className="banner-form-progress">
                 <BannerFormIndicatorBg />
-                <BannerFormIndicatorMobileBg/>
+                <BannerFormIndicatorMobileBg />
             </span>
             <div className="banner-form-prices">
                 <p className="banner-form-price">Current Price: $0.007</p>
                 <p className="banner-form-price">Next Price: $0.008</p>
             </div>
-            <Input label="Your Balance" type="number" />
+            <div className="banner-form-balance">
+                <span>Your Balance</span>
+                <p className="banner-form-balance-panel">0.000</p>
+            </div>
             <div className="banner-form-selector">
                 <span className="banner-form-selector-title">Payment method</span>
                 <div className="banner-form-selector-options">
@@ -42,10 +45,10 @@ export default function BannerForm() {
                 </div>
             </div>
             <div className="banner-form-amounts">
-                <Input label="Pay with ETH" type="number"/>
-                <Input label="Receive LNR" type="number"/>
+                <Input label="Pay with ETH" type="number" />
+                <Input label="Receive LNR" type="number" />
             </div>
-            <Input label="Referral code" type="number"/>
+            <Input label="Referral code" type="number" />
             <button className="banner-form-button">
                 Connect Wallet
             </button>

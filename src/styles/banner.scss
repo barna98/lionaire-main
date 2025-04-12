@@ -67,7 +67,7 @@
 
         .swiper-slide span {
             color: #FFF;
-            -webkit-text-stroke-width: 1.4px;
+            -webkit-text-stroke-width: 1.1px;
             -webkit-text-stroke-color: #000;
             font-family: 'Retro Gaming', system-ui;
             font-size: 16px;
@@ -186,6 +186,38 @@
             line-height: 135%;
         }
 
+        &-balance{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            align-items: flex-start;
+            span{
+                color: rgba(0, 0, 0, 0.50);
+                font-family: 'Retro Gaming', system-ui;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 135%;
+                margin-bottom: 6px;
+            }
+            &-panel{
+                width: 100%;
+                background: #DADADA;
+                border-top: 4px solid #F1F1F1;
+                border-left: 4px solid #F1F1F1;
+                border-bottom: 4px solid #707070;
+                border-right: 4px solid #707070;
+                color: #FFF;
+                -webkit-text-stroke-width: 1.5px;
+                -webkit-text-stroke-color: #000;
+                font-size: 28px;
+                font-weight: 400;
+                line-height: 100%;
+                padding: 9px;
+                text-align: start;
+            }
+        }
+
         &-selector {
             display: flex;
             flex-direction: column;
@@ -216,11 +248,11 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                background: #DADADA;
-                border-top: 4px solid #F1F1F1;;
-                border-left: 4px solid #F1F1F1;;
-                border-bottom: 4px solid #707070;
-                border-right: 4px solid #707070;
+                background: #ABABAB;
+                border-top: 4px solid #D0D0D0;
+                border-left: 4px solid #D0D0D0;
+                border-bottom: 4px solid #8C8A8A;
+                border-right: 4px solid #8C8A8A;
                 cursor: pointer;
                 transition: 0.2s;
 
@@ -238,11 +270,11 @@
                 }
 
                 &:has(input:checked) {
-                    background: #ABABAB;
-                    border-top: 4px solid #D0D0D0;
-                    border-left: 4px solid #D0D0D0;
-                    border-bottom: 4px solid #8C8A8A;
-                    border-right: 4px solid #8C8A8A;
+                    background: #DADADA;
+                    border-top: 4px solid #F1F1F1;
+                    border-left: 4px solid #F1F1F1;
+                    border-bottom: 4px solid #707070;
+                    border-right: 4px solid #707070;
 
                 }
 
