@@ -5,7 +5,7 @@ import AboutSwiperBgMobile from './icons/about/AboutSwiperBgMobile.tsx';
 
 export default function About(){
     return(
-        <section className="about">
+        <section className="about" id="about">
             <img className="about-img" src="/img/about.png" alt="about" />
             <img className="about-img-mobile" src="/img/about-mobile.png" alt="about-mobile" />
             <div className="container">

@@ -41,9 +41,9 @@ export default function HeaderMobile({ setWalletOpen, walletOpen }: PropsType) {
                 {menuOpen && (
                     <nav className="header-mobile-menu">
                         <HeaderOverlayBg />
-                        <a href="/">About</a>
-                        <a href="/">Tokenomics</a>
-                        <a href="/">Roadmap</a>
+                        <a href="#about">About</a>
+                        <a href="#tokenomics">Tokenomics</a>
+                        <a href="#roadmap">Roadmap</a>
                         <a href="/">Whitepaper</a>
                         <div className="header-mobile-menu-socials">
                             <a href="/"><TelegramIcon /></a>

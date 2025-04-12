@@ -4,7 +4,7 @@ import TokenomicsItem from './icons/tokenomics/TokenomicsItem.tsx';
 
 export default function Tokenomics() {
     return (
-        <section className="tokenomics">
+        <section className="tokenomics" id="tokenomics">
             <img className="tokenomics-img" src="/img/tokenomics.png" alt="tokenomics" />
             <img className="tokenomics-img-mobile" src="/img/tokenomics-mobile.png" alt="tokenomics-mobile" />
             <div className="container">

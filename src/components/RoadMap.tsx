@@ -2,7 +2,7 @@ import RoadmapItem from './roadmap/RoadmapItem.tsx';
 
 export default function RoadMap() {
     return (
-        <section className="roadmap">
+        <section className="roadmap" id="roadmap">
             <img className="roadmap-img" src="/img/roadmap.png" alt="roadmap" />
             <img className="roadmap-img-mobile" src="/img/roadmap-mobile.png" alt="roadmap-mobile" />
             <div className="container">

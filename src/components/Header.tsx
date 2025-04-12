@@ -18,13 +18,13 @@ export default function Header({ setWalletOpen, walletOpen }: PropsType) {
                     <HeaderBg />
                     <a href="/"> <HeaderLogo /></a>
                     <nav className="header-nav">
-                        <a className="header-nav-link" href="/">
+                        <a className="header-nav-link" href="#about">
                             About
                         </a>
-                        <a className="header-nav-link" href="/">
+                        <a className="header-nav-link" href="#tokenomics">
                             Tokenomics
                         </a>
-                        <a className="header-nav-link" href="/">
+                        <a className="header-nav-link" href="#roadmap">
                             Roadmap
                         </a>
                         <a className="header-nav-link" href="/">
