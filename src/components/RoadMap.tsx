@@ -8,6 +8,7 @@ export default function RoadMap() {
             <div className="container">
                 <div className="roadmap-content">
                     <video className="roadmap-video top" playsInline controls={false} autoPlay muted loop>
+                        <source src="/video/roadmap-palms.webm" type="video/mp4" />
                         <source src="/video/roadmap-palms.mp4" type="video/mp4" />
                     </video>
                     <h2 className="roadmap-title">Lionaire’s Roadmap</h2>
@@ -60,6 +61,7 @@ export default function RoadMap() {
                         />
                     </div>
                     <video className="roadmap-video bottom" playsInline controls={false} autoPlay muted loop>
+                        <source src="/video/roadmap-wave.webm" type="video/mp4" />
                         <source src="/video/roadmap-wave.mp4" type="video/mp4" />
                     </video>
                 </div>
