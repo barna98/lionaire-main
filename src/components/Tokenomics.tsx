@@ -2,6 +2,7 @@ import RunningLine from './RunningLine.tsx';
 import TokenomicsCircle from './icons/tokenomics/TokenomicsCircle.tsx';
 import TokenomicsItem from './icons/tokenomics/TokenomicsItem.tsx';
 import animation from './tokenomics.json';
+import animationMobile from './tokenomics_mob.json';
 import Lottie from 'lottie-react';
 
 
@@ -9,6 +10,7 @@ export default function Tokenomics() {
     return (
         <section className="tokenomics" id="tokenomics">
             <Lottie className="tokenomics-img" animationData={animation}/>
+            <Lottie className="tokenomics-img-mobile" animationData={animationMobile}/>
             <div className="container">
                 <div className="tokenomics-content">
                     <div className="tokenomics-circle">
