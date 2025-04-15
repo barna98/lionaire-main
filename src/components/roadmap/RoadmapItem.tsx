@@ -5,6 +5,8 @@ import RoadmapItemNotCheked from '../icons/roadmap/RoadmapItemNotCheked.tsx';
 import RoadmapItemBg from '../icons/roadmap/RoadmapItemBg.tsx';
 import RoadmapItemBgChecked from '../icons/roadmap/RoadmapItemBgChecked.tsx';
 import RoadmapItemBgNotChecked from '../icons/roadmap/RoadmapItemBgNotChecked.tsx';
+import { useAnimation, useInView, motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 interface PropsType {
     isFirst?: boolean;
@@ -27,8 +29,26 @@ export default function RoadmapItem({
                                         articleTwo,
                                         articleThree,
                                     }: PropsType) {
+    const controls = useAnimation();
+    const ref = useRef(null);
+    const inView = useInView(ref, { margin: '-150px' });
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }
+    }, [controls, inView]);
+
     return <div className="roadmap-item">
-        <div className="roadmap-item-card">
+        <motion.div className="roadmap-item-card"
+                    ref={ref}
+                    initial="hidden"
+                    animate={controls}
+                    transition={{ duration: 0.6 }}
+                    variants={{
+                        hidden: { opacity: 0, y: 50 },
+                        visible: { opacity: 1, y: 0 },
+                    }}>
             <div className="roadmap-item-bg">
                 <RoadmapItemBg />
             </div>
@@ -42,7 +62,7 @@ export default function RoadmapItem({
                 <li>{articleTwo}</li>
                 <li>{articleThree}</li>
             </ul>
-        </div>
+        </motion.div>
         <div className="roadmap-item-track">
             {isFirst && <RoadmapItemLineStart />}
             <div className="roadmap-item-track-line"></div>

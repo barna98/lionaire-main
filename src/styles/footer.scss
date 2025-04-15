@@ -68,8 +68,7 @@
 
         &-subtitle {
             color: #FFF;
-            -webkit-text-stroke-width: 1.5px;
-            -webkit-text-stroke-color: #000;
+            text-shadow: 2px 2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px 0px 0 #000, 0px 2px 0 #000, -2px 0px 0 #000, 0px -2px 0 #000;
             font-size: 36px;
             font-weight: 400;
             line-height: 100%;
@@ -108,8 +107,7 @@
         &-text {
             color: #FFF;
             text-align: center;
-            -webkit-text-stroke-width: 1.5px;
-            -webkit-text-stroke-color: #000;
+            text-shadow: 2px 2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px 0px 0 #000, 0px 2px 0 #000, -2px 0px 0 #000, 0px -2px 0 #000;
             font-size: 28px;
             font-weight: 400;
             line-height: 125%;

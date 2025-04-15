@@ -33,7 +33,7 @@ export default function Banner({ setWalletOpen }: PropsType) {
                 <span className="black"></span>
                 <span className="white"></span>
                 <RunningLine className="banner-line-swiper" />
-                <span className="white down"></span>
+                <span className="gray down"></span>
                 <span className="black down"></span>
             </div>
         </section>
