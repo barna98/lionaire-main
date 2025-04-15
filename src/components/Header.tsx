@@ -27,13 +27,13 @@ export default function Header({ setWalletOpen, walletOpen }: PropsType) {
                         <a className="header-nav-link" href="#roadmap">
                             Roadmap
                         </a>
-                        <a className="header-nav-link" href="/">
+                        <a className="header-nav-link" href="/Whitepaper.pdf">
                             Whitepaper
                         </a>
                     </nav>
                     <div className="header-socials">
-                        <a href="/" className="header-socials-link"><TelegramIcon /></a>
-                        <a href="/" className="header-socials-link"><XIcon /></a>
+                        <a href="https://t.me/+GoiVzsSte85hMjU0" className="header-socials-link"><TelegramIcon /></a>
+                        <a href="https://x.com/lionaireHQx" className="header-socials-link"><XIcon /></a>
                         <button onClick={() => setWalletOpen(true)} className="header-socials-button">
                             <WalletIcon />
                         </button>

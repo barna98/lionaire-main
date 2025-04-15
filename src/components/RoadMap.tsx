@@ -7,6 +7,9 @@ export default function RoadMap() {
             <img className="roadmap-img-mobile" src="/img/roadmap-mobile.png" alt="roadmap-mobile" />
             <div className="container">
                 <div className="roadmap-content">
+                    <video className="roadmap-video top" playsInline controls={false} autoPlay muted loop>
+                        <source src="/video/roadmap-palms.mp4" type="video/mp4" />
+                    </video>
                     <h2 className="roadmap-title">Lionaire’s Roadmap</h2>
                     <p className="roadmap-text">Roar Through the Jungle Lionaire’s journey is more than a roadmap — it’s
                         a wild expedition through meme-powered markets and untamed possibilities. From the first roar to
@@ -56,6 +59,9 @@ export default function RoadMap() {
                             articleThree="• Collabs, community events, and global jungle expansion "
                         />
                     </div>
+                    <video className="roadmap-video bottom" playsInline controls={false} autoPlay muted loop>
+                        <source src="/video/roadmap-wave.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </section>

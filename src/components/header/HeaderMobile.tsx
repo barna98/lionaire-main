@@ -44,10 +44,10 @@ export default function HeaderMobile({ setWalletOpen, walletOpen }: PropsType) {
                         <a href="#about">About</a>
                         <a href="#tokenomics">Tokenomics</a>
                         <a href="#roadmap">Roadmap</a>
-                        <a href="/">Whitepaper</a>
+                        <a href="/Whitepaper.pdf">Whitepaper</a>
                         <div className="header-mobile-menu-socials">
-                            <a href="/"><TelegramIcon /></a>
-                            <a href="/"><XIcon /></a>
+                            <a href="https://t.me/+GoiVzsSte85hMjU0"><TelegramIcon /></a>
+                            <a href="https://x.com/lionaireHQ"><XIcon /></a>
                         </div>
                         <button className="header-mobile-menu-button" onClick={() => setWalletOpen(true)}>
                             <HeaderButtonBg />

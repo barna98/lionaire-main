@@ -1,5 +1,8 @@
 import RunningLine from './RunningLine.tsx';
 import BannerForm from './BannerForm.tsx';
+import mainAnimation from './banner_animation.json';
+import Lottie from 'lottie-react';
+
 
 interface PropsType {
     setWalletOpen: (v: boolean) => void;
@@ -8,8 +11,12 @@ interface PropsType {
 export default function Banner({ setWalletOpen }: PropsType) {
     return (
         <section className="banner">
-            <img className="banner-img" src="/img/banner.png" alt="banner" />
-            <img className="banner-img-mobile" src="/img/banner-mobile-main.png" alt="banner-mobile" />
+            <Lottie
+                className="banner-img"
+                animationData={mainAnimation}
+                loop
+                autoplay
+            />
             <div className="container">
                 <div className="banner-content">
                     <h1 className="banner-title">

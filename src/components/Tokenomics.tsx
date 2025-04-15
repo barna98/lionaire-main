@@ -1,12 +1,14 @@
 import RunningLine from './RunningLine.tsx';
 import TokenomicsCircle from './icons/tokenomics/TokenomicsCircle.tsx';
 import TokenomicsItem from './icons/tokenomics/TokenomicsItem.tsx';
+import animation from './tokenomics.json';
+import Lottie from 'lottie-react';
+
 
 export default function Tokenomics() {
     return (
         <section className="tokenomics" id="tokenomics">
-            <img className="tokenomics-img" src="/img/tokenomics.png" alt="tokenomics" />
-            <img className="tokenomics-img-mobile" src="/img/tokenomics-mobile.png" alt="tokenomics-mobile" />
+            <Lottie className="tokenomics-img" animationData={animation}/>
             <div className="container">
                 <div className="tokenomics-content">
                     <div className="tokenomics-circle">
