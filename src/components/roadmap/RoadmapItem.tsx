@@ -31,7 +31,7 @@ export default function RoadmapItem({
                                     }: PropsType) {
     const controls = useAnimation();
     const ref = useRef(null);
-    const inView = useInView(ref, { margin: '-200px' });
+    const inView = useInView(ref, { margin: '-200px 0px' });
 
     useEffect(() => {
         if (inView) {
