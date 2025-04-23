@@ -31,7 +31,7 @@ export default function RoadmapItem({
                                     }: PropsType) {
     const controls = useAnimation();
     const ref = useRef(null);
-    const inView = useInView(ref, { margin: '-150px' });
+    const inView = useInView(ref, { margin: '-200px' });
 
     useEffect(() => {
         if (inView) {
@@ -66,8 +66,18 @@ export default function RoadmapItem({
         <div className="roadmap-item-track">
             {isFirst && <RoadmapItemLineStart />}
             <div className="roadmap-item-track-line"></div>
-            {isChecked ? <RoadmapItemChecked /> : <RoadmapItemNotCheked />}
+            <motion.div className="checked"
+                        initial="hidden"
+                        animate={controls}
+                        transition={{ duration: 0.6 }}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: { opacity: 1 },
+                        }}>
+                {isChecked ? <RoadmapItemChecked /> : <RoadmapItemNotCheked />}
+            </motion.div>
             {isLast && <RoadmapItemLineEnd />}
         </div>
-    </div>;
+    </div>
+        ;
 }
