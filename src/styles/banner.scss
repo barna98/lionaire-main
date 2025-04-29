@@ -123,10 +123,10 @@
     }
 
     &-form {
+        display: none;
         height: 703px;
         width: 429px;
         padding: 13px 28px 28px;
-        display: flex;
         flex-direction: column;
         align-items: center;
         margin: 24px 0 24px auto;
