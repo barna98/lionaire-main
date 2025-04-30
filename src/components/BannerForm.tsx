@@ -13,7 +13,8 @@ export default function BannerForm({ setWalletOpen }: PropsType) {
         <div className="banner-form">
             <BannerFormBg />
             <BannerFormMobileBg />
-            <h4 className="banner-form-title">STAGE - 1</h4>
+            <h4 className="banner-form-title">PRESALE</h4>
+            <h2 className="banner-form-coming-soon">COMING SOON</h2>
             <p className="banner-form-raised">Raised: $12,123,534.43</p>
             <span className="banner-form-progress">
                 <BannerFormIndicatorBg />
@@ -52,7 +53,9 @@ export default function BannerForm({ setWalletOpen }: PropsType) {
                 <Input label="Pay with ETH" type="number" />
                 <Input label="Receive LNR" type="number" />
             </div>
-            <Input label="Referral code" type="number" />
+            <div className="banner-form-referral">
+                <Input label="Referral code" type="number" />
+            </div>
             <button className="banner-form-button" onClick={() => setWalletOpen(true)}>
                 Connect Wallet
             </button>

@@ -160,7 +160,22 @@
             margin-bottom: 36px;
         }
 
+        &-coming-soon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000;
+            font-family: 'Retro Gaming', system-ui;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 135%;
+            text-align: center;
+            z-index: 1;
+        }
+
         &-raised {
+            display: none;
             color: #000;
             font-family: 'Retro Gaming', system-ui;
             font-size: 16px;
@@ -198,10 +213,9 @@
         }
 
         &-balance {
+            display: none;
             width: 100%;
-            display: flex;
             flex-direction: column;
-
             align-items: flex-start;
 
             span {
@@ -232,7 +246,7 @@
         }
 
         &-selector {
-            display: flex;
+            display: none;
             flex-direction: column;
             justify-content: flex-start;
             margin: 18px 0;
@@ -302,14 +316,21 @@
         }
 
         &-amounts {
-            display: grid;
+            display: none;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             width: 100%;
             margin-bottom: 14px;
         }
 
+        &-referral {
+            display: none;
+            width: 100%;
+            margin-bottom: 14px;
+        }
+
         &-button {
+            display: none;
             width: 100%;
             margin-top: 16px;
             padding: 11px 80px 10px;
@@ -430,6 +451,10 @@
                 margin-bottom: 20px;
             }
 
+            &-coming-soon {
+                margin: 20px 0;
+            }
+
             &-raised {
                 margin-bottom: 5px;
             }
@@ -451,7 +476,7 @@
             }
 
             &-selector {
-                display: flex;
+                display: none;
                 flex-direction: column;
                 justify-content: flex-start;
                 margin: 16px 0;
