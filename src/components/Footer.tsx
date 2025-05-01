@@ -32,8 +32,8 @@ export default function Footer() {
                             </div>
                             <div className="footer-copyright">
                                 <div className="footer-copyright-socials">
-                                    <a href="/"> <FooterTelegramIcon/></a>
-                                    <a href="/"> <FooterXIcon/></a>
+                                    <a href="https://t.me/+GoiVzsSte85hMjU0"><FooterTelegramIcon/></a>
+                                    <a href="https://x.com/lionaireHQ"><FooterXIcon/></a>
                                 </div>
                                 <p className="footer-copyright-text">© 2025 Lionaire</p>
                             </div>
