@@ -53,37 +53,37 @@ export default function RunningLine({ className }: PropsType){
                 }}
             >
                 <SwiperSlide>
-                    <span>$LNR NOW LIVE!</span>
+                    <span>$LNR COMING SOON!</span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <span>$LNR NOW LIVE!</span>
+                    <span>$LNR COMING SOON!</span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <span>$LNR NOW LIVE!</span>
+                    <span>$LNR COMING SOON!</span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <span>$LNR NOW LIVE!</span>
+                    <span>$LNR COMING SOON!</span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <span>$LNR NOW LIVE!</span>
+                    <span>$LNR COMING SOON!</span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <span>$LNR NOW LIVE!</span>
+                    <span>$LNR COMING SOON!</span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <span>$LNR NOW LIVE!</span>
+                    <span>$LNR COMING SOON!</span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <span>$LNR NOW LIVE!</span>
+                    <span>$LNR COMING SOON!</span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <span>$LNR NOW LIVE!</span>
+                    <span>$LNR COMING SOON!</span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <span>$LNR NOW LIVE!</span>
+                    <span>$LNR COMING SOON!</span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <span>$LNR NOW LIVE!</span>
+                    <span>$LNR COMING SOON!</span>
                 </SwiperSlide>
             </Swiper>
         </div>
